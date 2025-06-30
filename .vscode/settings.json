@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "bobabiking.sln"
+    "dotnet.defaultSolution": "bobagame.sln"
 }
