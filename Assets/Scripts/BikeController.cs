@@ -32,26 +32,28 @@ public class BikeController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             // move the rigidbody forward constantly at the bike speed in the direction of the blue arrow
-            bikeRigidbody.MovePosition(currentPosition + transform.forward * bikeSpeed * Time.deltaTime);
+            //bikeRigidbody.MovePosition(currentPosition + transform.forward * bikeSpeed * Time.deltaTime);
+            bikeRigidbody.MovePosition(currentPosition + Camera.main.transform.forward * bikeSpeed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             // move the rigidbody backwards constantly at the bike speed in the direction of the blue arrow
-            bikeRigidbody.MovePosition(currentPosition + -transform.forward * bikeSpeed * Time.deltaTime);
+            //bikeRigidbody.MovePosition(currentPosition + -transform.forward * bikeSpeed * Time.deltaTime);
+            bikeRigidbody.MovePosition(currentPosition + -Camera.main.transform.forward * bikeSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            // rotate the bike on the Y axis in the positive direction
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * bikeRotationSpeed, Space.World);
-        }
+        // if (Input.GetKey(KeyCode.D))
+        // {
+        //     // rotate the bike on the Y axis in the positive direction
+        //     transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * bikeRotationSpeed, Space.World);
+        // }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            // rotate the bike on the Y axis in the negative direction
-            transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * bikeRotationSpeed, Space.World);
-        }
+        // if (Input.GetKey(KeyCode.A))
+        // {
+        //     // rotate the bike on the Y axis in the negative direction
+        //     transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * bikeRotationSpeed, Space.World);
+        // }
     }
 
     void TiltOverTime()
